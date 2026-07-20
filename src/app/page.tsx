@@ -60,7 +60,7 @@ export default function Home() {
               {site.builtBy.blurb}
             </span>
             <h1 className="mt-6 text-balance text-5xl font-bold leading-[1.05] tracking-tight sm:text-7xl">
-              The AI operating system for{" "}
+              The AI CRM for{" "}
               <span className="bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-2)] bg-clip-text text-transparent">
                 venture capital
               </span>

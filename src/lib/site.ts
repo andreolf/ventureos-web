@@ -9,7 +9,7 @@ export const site = {
   domain: "ventureos.ai",
   url: "https://ventureos.ai",
 
-  tagline: "The AI-native operating system for venture capital",
+  tagline: "The AI-native CRM for venture capital",
   description:
     "Source, evaluate, and manage deals with AI. VentureOS surfaces founders before they raise, drafts investment memos in your format, and keeps your pipeline moving — built inside an active fund, not a lab.",
 
