@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="border-t border-[var(--color-border)]/60">
       <div className="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-10 text-sm text-[var(--color-muted)] sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-center gap-2 font-semibold text-[var(--color-fg)]">
-          <span className="grid h-6 w-6 place-items-center rounded-md bg-[var(--color-accent)] text-xs font-bold text-black">
+          <span className="grid h-6 w-6 place-items-center rounded-md bg-[var(--color-accent)] text-xs font-bold text-white">
             {site.name.charAt(0)}
           </span>
           {site.name}

@@ -62,7 +62,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           {post.title}
         </h1>
         <article
-          className="prose prose-invert-brand mt-10 max-w-none prose-headings:tracking-tight prose-a:font-medium"
+          className="prose prose-brand mt-10 max-w-none prose-headings:tracking-tight prose-a:font-medium"
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />

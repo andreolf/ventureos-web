@@ -102,7 +102,7 @@ export default function Home() {
               // eslint-disable-next-line @next/next/no-img-element
               <img src="/product.png" alt={`${site.name} pipeline dashboard`} className="block w-full" />
             ) : (
-              <div className="grid aspect-[16/9] place-items-center bg-gradient-to-br from-[var(--color-surface)] to-[var(--color-bg)]">
+              <div className="grid aspect-[16/9] place-items-center bg-[var(--color-bg-soft)]">
                 <div className="text-center">
                   <p className="text-sm font-medium text-[var(--color-fg)]">Product preview</p>
                   <p className="mt-1 text-xs text-[var(--color-muted)]">
