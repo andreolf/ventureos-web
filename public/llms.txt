@@ -3,7 +3,7 @@
 > The AI-native operating system for venture capital. VentureOS helps early-stage
 > funds source founders before they raise, generate first-pass investment memos in
 > their own format, track relationships and email, and keep their pipeline moving —
-> built and dogfooded inside an active fund, not a lab.
+> built and used every day inside an active fund, not a lab.
 
 ## What it does
 - AI deal sourcing from leading signals (GitHub, Product Hunt, ecosystem feeds) before a round is announced.

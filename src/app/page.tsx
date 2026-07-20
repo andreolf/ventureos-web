@@ -132,7 +132,7 @@ export default function Home() {
             wins deals — not demos.”
           </blockquote>
           <p className="mt-5 text-sm text-[var(--color-muted)]">
-            Dogfooded daily at {site.builtBy.fund}.
+            Built and used every day at {site.builtBy.fund}.
           </p>
         </section>
 

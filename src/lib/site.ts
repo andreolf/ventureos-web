@@ -22,7 +22,7 @@ export const site = {
   // The credibility hook — your real differentiator.
   builtBy: {
     fund: "Oui Capital",
-    blurb: "Dogfooded daily by an active early-stage fund.",
+    blurb: "Built and used daily inside an active early-stage fund.",
   },
 
   social: {

@@ -32,4 +32,4 @@ The firms that win the next decade won't be the ones with the most analysts. The
 
 ---
 
-*VentureOS is the intelligence layer for modern funds — built and dogfooded inside an active fund. [Book a demo](/#demo).*
+*VentureOS is the intelligence layer for modern funds — built and used daily inside an active fund. [Book a demo](/#demo).*
