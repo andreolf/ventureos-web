@@ -1,7 +1,10 @@
+import fs from "fs";
+import path from "path";
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WaitlistCTA } from "@/components/WaitlistCTA";
+import { TrustStrip } from "@/components/TrustStrip";
 import { site } from "@/lib/site";
 import { getAllPosts } from "@/lib/blog";
 
@@ -41,6 +44,7 @@ const STEPS = [
 
 export default function Home() {
   const posts = getAllPosts().slice(0, 3);
+  const hasScreenshot = fs.existsSync(path.join(process.cwd(), "public", "product.png"));
 
   return (
     <>
@@ -80,6 +84,48 @@ export default function Home() {
                 See what it does
               </Link>
             </div>
+          </div>
+        </section>
+
+        <TrustStrip />
+
+        {/* Product preview — drop a real CRM screenshot at /public/product.png */}
+        <section className="mx-auto max-w-6xl px-5 pt-20">
+          <div className="overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] shadow-2xl">
+            <div className="flex items-center gap-1.5 border-b border-[var(--color-border)] px-4 py-3">
+              <span className="h-3 w-3 rounded-full bg-red-400/70" />
+              <span className="h-3 w-3 rounded-full bg-yellow-400/70" />
+              <span className="h-3 w-3 rounded-full bg-green-400/70" />
+              <span className="ml-3 text-xs text-[var(--color-muted)]">{site.domain}/dashboard</span>
+            </div>
+            {hasScreenshot ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src="/product.png" alt={`${site.name} pipeline dashboard`} className="block w-full" />
+            ) : (
+              <div className="grid aspect-[16/9] place-items-center bg-gradient-to-br from-[var(--color-surface)] to-[var(--color-bg)]">
+                <div className="text-center">
+                  <p className="text-sm font-medium text-[var(--color-fg)]">Product preview</p>
+                  <p className="mt-1 text-xs text-[var(--color-muted)]">
+                    Drop a screenshot at <code className="text-[var(--color-accent)]">/public/product.png</code>
+                  </p>
+                </div>
+              </div>
+            )}
+          </div>
+          <p className="mt-3 text-center text-xs text-[var(--color-muted)]">
+            The pipeline your team actually works in.
+          </p>
+        </section>
+
+        {/* Stats */}
+        <section className="mx-auto max-w-6xl px-5 py-20">
+          <div className="grid grid-cols-2 gap-8 rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg-soft)] p-10 lg:grid-cols-4">
+            {site.stats.map((s) => (
+              <div key={s.label} className="text-center">
+                <div className="text-4xl font-bold tracking-tight text-[var(--color-fg)]">{s.value}</div>
+                <div className="mt-2 text-sm text-[var(--color-muted)]">{s.label}</div>
+              </div>
+            ))}
           </div>
         </section>
 
@@ -128,11 +174,12 @@ export default function Home() {
             Built by investors, not a lab
           </p>
           <blockquote className="mx-auto mt-5 max-w-2xl text-2xl font-medium leading-snug tracking-tight sm:text-3xl">
-            “Every feature exists because our own fund needed it. We ship what actually
-            wins deals — not demos.”
+            “{site.testimonial.quote}”
           </blockquote>
           <p className="mt-5 text-sm text-[var(--color-muted)]">
-            Built and used every day at {site.builtBy.fund}.
+            <span className="font-semibold text-[var(--color-fg)]">{site.testimonial.name}</span>
+            {" · "}
+            {site.testimonial.role}
           </p>
         </section>
 

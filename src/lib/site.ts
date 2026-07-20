@@ -25,6 +25,22 @@ export const site = {
     blurb: "Built and used daily inside an active early-stage fund.",
   },
 
+  // Outcome stats (honest, product-capability framed — edit freely).
+  stats: [
+    { value: "6+", label: "Signal sources monitored daily" },
+    { value: "<2 min", label: "From pitch deck to first-pass memo" },
+    { value: "0", label: "Manual data-entry required" },
+    { value: "100%", label: "Of email & activity auto-logged" },
+  ],
+
+  // Replace with a real, attributed quote from a partner before launch.
+  testimonial: {
+    quote:
+      "Every feature exists because our own fund needed it. We ship what actually wins deals — not demos.",
+    name: "Managing Partner",
+    role: "Oui Capital",
+  },
+
   social: {
     twitter: "https://x.com/",
     linkedin: "https://www.linkedin.com/",
