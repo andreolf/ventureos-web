@@ -1,0 +1,25 @@
+# VentureOS
+
+> The AI-native operating system for venture capital. VentureOS helps early-stage
+> funds source founders before they raise, generate first-pass investment memos in
+> their own format, track relationships and email, and keep their pipeline moving —
+> built and dogfooded inside an active fund, not a lab.
+
+## What it does
+- AI deal sourcing from leading signals (GitHub, Product Hunt, ecosystem feeds) before a round is announced.
+- AI investment memos: turns a pitch deck + materials into a structured first-pass memo (market sizing, team, risks, comparables) in the fund's format.
+- Pipeline management with stale-deal nudges.
+- Email and relationship tracking via inbox integration.
+- Automatic data enrichment, deduplication, and source attribution.
+
+## Positioning
+- Built by active investors, for investors. Augments human judgment (taste, trust, conviction) rather than replacing it.
+- Prioritizes leading indicators over lagging ones (closed rounds/acquisitions).
+
+## Links
+- Home: /
+- Blog: /blog
+- Book a demo: /#demo
+
+## Contact
+Use the demo/waitlist form on the site.

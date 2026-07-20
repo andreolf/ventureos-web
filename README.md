@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# VentureOS — marketing site
 
-## Getting Started
+The AI-native operating system for venture capital. Marketing landing page + blog.
 
-First, run the development server:
+> **Placeholder brand.** The name/domain/links live in one file: [`src/lib/site.ts`](src/lib/site.ts). Edit that to rebrand the entire site.
+
+## Stack
+
+- Next.js 16 (App Router) + React 19
+- Tailwind CSS v4
+- Markdown blog (`content/blog/*.md`) via `gray-matter` + `marked`
+- Fully static / SSG — fast, SEO- and GEO-friendly
+
+## Develop
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # production build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Rebrand checklist
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Edit `src/lib/site.ts` — `name`, `domain`, `url`, links.
+2. Set `tallyFormUrl` / `demoUrl` to your real [Tally](https://tally.so) form or booking link.
+3. Swap `--color-accent` in `src/app/globals.css` for your brand color.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Content
 
-## Learn More
+- **Blog posts:** add a `.md` file to `content/blog/` with frontmatter (`title`, `description`, `date`, `author`, `tags`). It auto-appears on `/blog`, the homepage teaser, and the sitemap.
 
-To learn more about Next.js, take a look at the following resources:
+## SEO / GEO
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Per-page metadata + Open Graph/Twitter cards
+- `sitemap.xml`, `robots.txt` (auto-generated)
+- Organization + Article JSON-LD structured data
+- `public/llms.txt` so LLM answer engines (ChatGPT, Perplexity) can read and cite the product
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deploy
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Push to GitHub and import into [Vercel](https://vercel.com). Set the custom domain there. No env vars required for the static site.
