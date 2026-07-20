@@ -30,20 +30,22 @@ export function WaitlistCTA() {
             />
           </div>
         ) : (
-          <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <a
-              href={contactMailto}
-              className="w-full rounded-xl btn-accent px-6 py-3 text-sm font-semibold sm:w-auto"
-            >
-              Email us to book a demo
-            </a>
-          </div>
-          <p className="mt-4 text-xs text-[var(--color-muted)]">
-            Or reach us directly at{" "}
-            <a href={contactMailto} className="font-medium text-[var(--color-accent)] hover:underline">
-              {site.contactEmail}
-            </a>
-          </p>
+          <>
+            <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <a
+                href={contactMailto}
+                className="w-full rounded-xl btn-accent px-6 py-3 text-sm font-semibold sm:w-auto"
+              >
+                Email us to book a demo
+              </a>
+            </div>
+            <p className="mt-4 text-xs text-[var(--color-muted)]">
+              Or reach us directly at{" "}
+              <a href={contactMailto} className="font-medium text-[var(--color-accent)] hover:underline">
+                {site.contactEmail}
+              </a>
+            </p>
+          </>
         )}
       </div>
     </section>
