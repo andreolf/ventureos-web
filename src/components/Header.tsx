@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { site } from "@/lib/site";
+import { site, demoHref } from "@/lib/site";
 
 export function Header() {
   return (
@@ -18,14 +18,9 @@ export function Header() {
             </Link>
           ))}
         </nav>
-        <a
-          href={site.demoUrl}
-          target="_blank"
-          rel="noreferrer"
-          className="rounded-xl btn-accent px-4 py-2 text-sm font-semibold"
-        >
+        <Link href={demoHref} className="rounded-xl btn-accent px-4 py-2 text-sm font-semibold">
           Book a demo
-        </a>
+        </Link>
       </div>
     </header>
   );

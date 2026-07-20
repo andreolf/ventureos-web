@@ -5,7 +5,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WaitlistCTA } from "@/components/WaitlistCTA";
 import { TrustStrip } from "@/components/TrustStrip";
-import { site } from "@/lib/site";
+import { site, demoHref } from "@/lib/site";
 import { getAllPosts } from "@/lib/blog";
 
 const FEATURES = [
@@ -69,14 +69,12 @@ export default function Home() {
               {site.description}
             </p>
             <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <a
-                href={site.demoUrl}
-                target="_blank"
-                rel="noreferrer"
+              <Link
+                href={demoHref}
                 className="w-full rounded-xl btn-accent px-7 py-3.5 text-sm font-semibold sm:w-auto"
               >
                 Book a demo
-              </a>
+              </Link>
               <Link
                 href="#features"
                 className="w-full rounded-xl border border-[var(--color-border)] px-7 py-3.5 text-sm font-semibold text-[var(--color-fg)] transition-colors hover:bg-[var(--color-surface)] sm:w-auto"

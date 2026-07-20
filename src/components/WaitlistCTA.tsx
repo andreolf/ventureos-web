@@ -1,13 +1,11 @@
-import { site } from "@/lib/site";
+import { site, formReady, contactMailto } from "@/lib/site";
 
 /**
  * Lead capture. Uses a Tally form embed (set site.tallyFormUrl). Until a real
- * form URL is set, we show the "Book a demo" button as a graceful fallback so
- * the section is never broken/empty.
+ * form URL is set, we fall back to a working mailto so nothing 404s.
  */
 export function WaitlistCTA() {
-  const hasForm = !site.tallyFormUrl.includes("REPLACE_ME");
-  const embedSrc = hasForm
+  const embedSrc = formReady
     ? `${site.tallyFormUrl}?transparentBackground=1&alignLeft=1`
     : null;
 
@@ -34,22 +32,18 @@ export function WaitlistCTA() {
         ) : (
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <a
-              href={site.demoUrl}
-              target="_blank"
-              rel="noreferrer"
+              href={contactMailto}
               className="w-full rounded-xl btn-accent px-6 py-3 text-sm font-semibold sm:w-auto"
             >
-              Book a demo
-            </a>
-            <a
-              href={site.social.twitter}
-              target="_blank"
-              rel="noreferrer"
-              className="w-full rounded-xl border border-[var(--color-border)] px-6 py-3 text-sm font-semibold text-[var(--color-fg)] transition-colors hover:bg-[var(--color-surface)] sm:w-auto"
-            >
-              Follow along
+              Email us to book a demo
             </a>
           </div>
+          <p className="mt-4 text-xs text-[var(--color-muted)]">
+            Or reach us directly at{" "}
+            <a href={contactMailto} className="font-medium text-[var(--color-accent)] hover:underline">
+              {site.contactEmail}
+            </a>
+          </p>
         )}
       </div>
     </section>

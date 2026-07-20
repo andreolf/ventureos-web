@@ -15,9 +15,12 @@ export const site = {
 
   // Lead capture — paste your Tally form URL / embed id here.
   // Get one at https://tally.so (free). Example: https://tally.so/r/abc123
+  // While this contains REPLACE_ME, CTAs fall back to the email below.
   tallyFormUrl: "https://tally.so/r/REPLACE_ME",
   // Optional: a Calendly/booking link for the "Book a demo" button.
   demoUrl: "https://tally.so/r/REPLACE_ME",
+  // Fallback contact — used whenever no real form URL is set. Always works.
+  contactEmail: "francesco@ouicapital.vc",
 
   // The credibility hook — your real differentiator.
   builtBy: {
@@ -54,3 +57,14 @@ export const site = {
 } as const;
 
 export type Site = typeof site;
+
+/** True once a real Tally form URL has been set. */
+export const formReady = !site.tallyFormUrl.includes("REPLACE_ME");
+
+/** A CTA target that never 404s: the demo section anchor. */
+export const demoHref = "#demo";
+
+/** Working mailto fallback for "Book a demo" until a form exists. */
+export const contactMailto = `mailto:${site.contactEmail}?subject=${encodeURIComponent(
+  `${site.name} — request a demo`
+)}`;
