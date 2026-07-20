@@ -37,4 +37,4 @@ The question isn't whether AI belongs in venture. It's whether you'd rather buil
 
 ---
 
-*VentureOS is the AI-native operating system for venture capital — built and used daily inside an active early-stage fund. [Book a demo](/#demo).*
+*VentureOS is the AI-native CRM for venture capital — built and used daily inside an active early-stage fund. [Book a demo](/#demo).*

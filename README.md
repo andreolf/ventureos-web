@@ -1,6 +1,6 @@
 # VentureOS — marketing site
 
-The AI-native operating system for venture capital. Marketing landing page + blog.
+The AI-native CRM for venture capital. Marketing landing page + blog.
 
 > **Placeholder brand.** The name/domain/links live in one file: [`src/lib/site.ts`](src/lib/site.ts). Edit that to rebrand the entire site.
 

@@ -18,7 +18,8 @@ export const metadata: Metadata = {
     "AI for venture capital",
     "deal sourcing software",
     "investment memo AI",
-    "venture capital operating system",
+    "venture capital CRM",
+    "AI CRM for VC",
     "dealflow management",
   ],
   openGraph: {
